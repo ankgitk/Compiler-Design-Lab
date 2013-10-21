@@ -1,0 +1,14 @@
+x=a+b
+b=d/2
+goto 6
+if a>b goto 2
+a=m+2
+b=a
+z=m+p
+if a>b goto 6
+if z==b goto 2
+a=b
+x=y+7
+if x==7 goto 1
+a=b+c
+goto 2 
