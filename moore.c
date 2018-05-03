@@ -38,11 +38,12 @@ int main()
 			case '\n':
 				i++;
 				j=0;
+				break;
 			default:
 				itable[i][j]=c;
 		}
 	}
-	m=i-1;
+	m=i+1;
 	for(i=0;i<m;i++)
 	{
 		osymbol[i]=itable[i][n];
@@ -56,10 +57,11 @@ int main()
 	int current_symbol=string[i++];
 	output[j++]=osymbol[current_state];
 	bool flag=false;
+	printf("current_state %d,output %c\n",current_state,osymbol[current_state]);
 	while(1)
 	{
 		int next_state=getState(current_state,current_symbol);
-		printf("current_state %d,current_symbol %c,next_state %d,output %c\n",current_state,current_symbol,next_state,osymbol[current_state]);
+		printf("current_state %d,current_symbol %c,next_state %d,output %c\n",current_state,current_symbol,next_state,osymbol[next_state]);
 		if(next_state<0)
 		{
 			flag=false;

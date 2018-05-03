@@ -1,4 +1,3 @@
-
 import re
 import string
 import pandas as pd 
@@ -150,7 +149,7 @@ def first(s, productions):
 
 if __name__=="__main__":
 	productions=dict()
-	grammar = open("grammar2", "r")
+	grammar = open("ll1.txt", "r")
 	first_dict = dict()
 	follow_dict = dict()
 	flag = 1

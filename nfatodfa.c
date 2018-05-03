@@ -3,6 +3,9 @@
 #include<string.h>
 #include<stdlib.h>
 
+/******  Add space in the end of final states separated by commas  **********/
+
+
 int itable[20][20][20];
 char isymbols[20];
 int fstates[20];
@@ -246,13 +249,13 @@ int main()
 			
 	}
 	fclose(ptr);
-	m=i-1;
+	m=i;
 	fcount=0;
-	for(i=1;i<=itable[i][0][0];i++)
+	for(i=1;i<=itable[m][0][0];i++)
 		fstates[fcount++]=itable[m][0][i];
 	printf("Input symbols\n",n,fcount);
 	for(i=0;i<n;i++)
-		printf("%d ",isymbols[i]);
+		printf("%c ",isymbols[i]);
 	printf("\nTransition table\n");
 	for(i=0;i<m;i++)
 	{
