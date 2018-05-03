@@ -4,8 +4,10 @@
 int main()
 {
 	system("COLOR F0");
-	char regex[]="(01+1+21+0)*";
-	char string[]="0121120";
+	FILE *fp=fopen("regex.txt","r");
+	char regex[100];
+	fscanf(fp,"%s",regex);
+	char string[100];
 	int m,n,i,j=0,k=0;
 	char components[10][10];
 	for(i=0;i<strlen(regex);i++)
@@ -33,6 +35,8 @@ int main()
 	for(i=0;i<m;i++)
 		printf("-%s- ",components[i]);
 	printf("\n");
+	printf("Enter the string:\n");
+	scanf("%s",string);
 	//check string
 	if(regex[strlen(regex)-1]!='*')
 	{
