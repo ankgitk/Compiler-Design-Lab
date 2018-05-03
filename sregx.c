@@ -3,6 +3,7 @@
 
 int main()
 {
+	system("COLOR F0");
 	char regex[]="(01+1+21+0)*";
 	char string[]="0121120";
 	int m,n,i,j=0,k=0;

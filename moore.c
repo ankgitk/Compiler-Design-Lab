@@ -22,6 +22,7 @@ int getState(int current_state,int current_symbol)
 
 int main()
 {
+	system("COLOR F0");
 	char osymbol[10];
 	int i=0,j=0;
 	FILE *ptr=fopen("moore.txt","r");

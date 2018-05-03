@@ -14,6 +14,7 @@ int bc=0;
 
 void fromFile()
 {
+	system("COLOR F0");
 	FILE *ptr=fopen("tac.txt","r");
 	int j=0;
 	char c;

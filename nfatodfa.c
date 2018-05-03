@@ -199,7 +199,7 @@ void convert()
 
 int main()
 {
-
+	system("COLOR F0");
 	char c;
 	int i,j,k;
 	FILE *ptr=fopen("nfatodfa.txt","r");
