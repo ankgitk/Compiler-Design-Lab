@@ -1,5 +1,3 @@
-// Joy's approach on Mealy machine
-
 #include<iostream>
 #include<string>
 #include<fstream>
