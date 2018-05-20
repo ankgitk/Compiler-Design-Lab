@@ -81,9 +81,15 @@ def ll1(follow, productions):
 				for element in follow[key]:
 					table[key, element] = value
 
+	nts=set()
+	ts=set()
 	for key,val in table.items():
 		print key,"=>",val
-
+		nts.add(key[0])
+		ts.add(key[1])
+		
+	print "Non terminals ",nts
+	print "Terminals ",ts
 	new_table = {}
 	for pair in table:
 		new_table[pair[1]] = {}
@@ -94,7 +100,16 @@ def ll1(follow, productions):
 
 	print "\n"
 	print "\nParsing Table in matrix form\n"
-	print pd.DataFrame(new_table).fillna('-')
+	print "\t","\t".join(ts)
+	once=1
+	for i in nts:
+		print i,"\t",
+		for j in ts:
+			if i in new_table[j]:
+				print new_table[j][i],"\t",
+			else:
+				print "-\t",
+		print "\n"
 	print "\n"
 
 	return table
@@ -189,6 +204,6 @@ if __name__=="__main__":
 	ll1Table = ll1(follow_dict, productions)
 
 	#parse("a*(a+a)",start,ll1Table)
-	parse("ba=a+23",start,ll1Table)
+	#parse("ba=a+23",start,ll1Table)
 
 	# tp(ll1Table)
